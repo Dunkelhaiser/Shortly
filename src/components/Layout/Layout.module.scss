@@ -1,0 +1,31 @@
+@use "../../scss/abstract/screen-queries.scss" as *;
+
+.layout {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2.5rem 10rem;
+
+    p {
+        margin-top: 0.5rem;
+        font-size: 1.125rem;
+        color: var(--grey-dark);
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
+    /* stylelint-disable-next-line order/order */
+    @include respond-tablet-landscape {
+        padding: 2.5rem 5rem;
+    }
+    @include respond-tablet {
+        padding: 2.5rem 2rem;
+    }
+    @include respond-phone {
+        h2 {
+            font-size: 1.875rem;
+            line-height: 3rem;
+        }
+    }
+}

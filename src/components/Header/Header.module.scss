@@ -5,6 +5,8 @@ header {
     @include flex($direction: row, $align: center, $gap: 3rem);
 
     position: relative;
+    z-index: 9999;
+
     max-width: 120rem;
     margin: 0 auto;
     padding: 2.5rem 10rem;
@@ -49,7 +51,6 @@ header {
 
         .content {
             position: absolute;
-            z-index: -1;
             top: -1px;
             right: 2rem;
             left: 2rem;
