@@ -3,10 +3,16 @@
     --foreground: hsl(230deg 25% 95%);
     --grey: hsl(0deg 0% 75%);
     --grey-dark: hsl(257deg 7% 63%);
+    --grey-dark-hover: hsl(257deg 7% 73%);
+    --grey-dark-active: hsl(257deg 7% 48%);
     --primary: hsl(180deg 66% 49%);
+    --primary-hover: hsl(180deg 66% 59%);
+    --primary-active: hsl(180deg 66% 45%);
     --secondary: hsl(257deg 27% 26%);
     --warning: hsl(0deg 87% 67%);
     --very-dark-violet: hsl(260deg 8% 14%);
     --very-dark-blue: hsl(255deg 11% 22%);
     --shadow: rgba(149 157 165 / 20%);
 }
+
+$text: var(--grey-dark);

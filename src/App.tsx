@@ -1,7 +1,8 @@
+import Header from "./components/Header/Header";
 import "./scss/styles.scss";
 
 function App() {
-    return <div className="app">Hello World</div>;
+    return <Header />;
 }
 
 export default App;

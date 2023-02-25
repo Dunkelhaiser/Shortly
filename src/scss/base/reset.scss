@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline-color: var(--secondary);
 }
 
 html,
@@ -11,7 +12,6 @@ body {
     font-family: var(--font);
     color: var(--text);
     background-color: var(--background);
-    outline-color: var(--secondary);
 }
 
 img,
@@ -38,6 +38,37 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+a {
+    color: var(--grey-dark);
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+
+    &:hover:not(.link_btn),
+    &:focus-visible:not(.link_btn) {
+        color: var(--grey-dark-hover);
+    }
+
+    &:active:not(.link_btn) {
+        color: var(--grey-dark-active);
+    }
+}
+
+.link_btn {
+    padding: 0.5em 1.25em;
+    color: var(--background);
+    background-color: var(--primary);
+    border-radius: 2em;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--primary-hover);
+    }
+
+    &:active {
+        background-color: var(--primary-active);
+    }
 }
 
 input:-webkit-autofill,
