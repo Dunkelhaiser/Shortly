@@ -12,9 +12,10 @@
     }
 
     .cards_section {
-        @include flex($direction: row, $align: stretch, $gap: 2rem);
+        @include flex($direction: row, $align: stretch, $justify: space-between, $gap: 2rem);
 
         position: relative;
+        width: 100%;
         margin-top: 5rem;
 
         &::before {
