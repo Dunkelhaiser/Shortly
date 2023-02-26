@@ -1,0 +1,29 @@
+@use "../../scss/abstract/screen-queries.scss" as *;
+@use "../../scss/abstract/mixins" as *;
+
+.boost {
+    @include flex($align: center, $gap: 1rem);
+
+    text-align: center;
+
+    background-color: var(--secondary);
+    background-image: url("../../images/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    h2 {
+        color: var(--background);
+    }
+
+    a {
+        display: inline-block;
+        font-size: 1.25rem;
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @include respond-phone {
+        background-image: url("../../images/bg-boost-mobile.svg");
+        background-position: center;
+        background-size: cover;
+    }
+}
