@@ -22,7 +22,7 @@ const Shorten = () => {
             </form>
 
             <section className={ShortenStyles.links}>
-                <Link originalLink="https://www.youtube.com/watch?v=l6dCMV-le_E" shortLink="bit.ly/das12qw" />
+                <Link originalLink="https://www.youtube.com/watch?v=l6dCMV-le_E" shortLink="https://www.bit.ly/das12qw" />
             </section>
         </div>
     );
