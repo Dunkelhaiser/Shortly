@@ -1,10 +1,6 @@
 @use "../../scss/abstract/screen-queries.scss" as *;
 
 .layout {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 2.5rem 10rem;
-
     p {
         color: var(--grey-dark);
     }
@@ -18,12 +14,7 @@
         font-size: 2.5rem;
     }
     /* stylelint-disable-next-line order/order */
-    @include respond-tablet-landscape {
-        padding: 2.5rem 5rem;
-    }
-    @include respond-tablet {
-        padding: 2.5rem 2rem;
-    }
+
     @include respond-phone {
         h2 {
             font-size: 1.875rem;

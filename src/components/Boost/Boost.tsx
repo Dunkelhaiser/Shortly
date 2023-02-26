@@ -5,10 +5,12 @@ import Layout from "../Layout/Layout";
 const Boost: React.FC = () => {
     return (
         <Layout className={BoostStyles.boost}>
-            <h2>Boost your links today</h2>
-            <a href="#" className="link_btn">
-                Get Started
-            </a>
+            <div className={BoostStyles.content}>
+                <h2>Boost your links today</h2>
+                <a href="#" className="link_btn">
+                    Get Started
+                </a>
+            </div>
         </Layout>
     );
 };

@@ -2,58 +2,58 @@
 @use "../../scss/abstract/mixins.scss" as *;
 
 .footer {
-    @include flex($direction: row, $justify: space-between, $gap: 1.5rem);
-
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 4rem 10rem;
-
     color: var(--background);
-
     background-color: var(--very-dark-violet);
 
-    .logo {
-        filter: brightness(0) invert(100%);
-    }
+    .content {
+        @include flex($direction: row, $justify: space-between, $gap: 1.5rem);
+        @include max-width;
 
-    .list {
-        @include flex($direction: row, $gap: 4rem);
+        padding: 4rem 10rem;
 
-        .links {
-            @include flex($gap: 1rem);
-
-            ul {
-                @include flex($gap: 0.5rem);
-
-                list-style: none;
-            }
+        .logo {
+            filter: brightness(0) invert(100%);
         }
-    }
-
-    .icon_list {
-        @include flex($direction: row, $gap: 2rem);
-    }
-
-    /* stylelint-disable-next-line order/order */
-    @include respond-tablet-landscape {
-        padding: 2.5rem 5rem;
-    }
-    @include respond-tablet {
-        padding: 2.5rem 2rem;
-    }
-    @include respond-phone {
-        @include flex($align: center, $gap: 2rem);
-
-        text-align: center;
 
         .list {
-            @include flex($align: center, $gap: 2rem);
+            @include flex($direction: row, $gap: 4rem);
 
             .links {
-                align-items: center;
+                @include flex($gap: 1rem);
 
                 ul {
+                    @include flex($gap: 0.5rem);
+
+                    list-style: none;
+                }
+            }
+        }
+
+        .icon_list {
+            @include flex($direction: row, $gap: 2rem);
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @include respond-tablet-landscape {
+            padding: 2.5rem 5rem;
+        }
+        @include respond-tablet {
+            padding: 2.5rem 2rem;
+        }
+        @include respond-phone {
+            @include flex($align: center, $gap: 2rem);
+
+            text-align: center;
+
+            .list {
+                @include flex($align: center, $gap: 2rem);
+
+                .links {
                     align-items: center;
+
+                    ul {
+                        align-items: center;
+                    }
                 }
             }
         }

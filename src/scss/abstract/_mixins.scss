@@ -1,7 +1,22 @@
+@use "./screen-queries" as *;
 @mixin flex($direction: column, $justify: flex-start, $align: flex-start, $gap: 0, $wrap: nowrap) {
     display: flex;
     flex-flow: $direction $wrap;
     gap: $gap;
     align-items: $align;
     justify-content: $justify;
+}
+
+@mixin max-width() {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2.5rem 10rem;
+
+    /* stylelint-disable-next-line order/order */
+    @include respond-tablet-landscape {
+        padding: 2.5rem 5rem;
+    }
+    @include respond-tablet {
+        padding: 2.5rem 2rem;
+    }
 }

@@ -3,12 +3,10 @@
 
 header {
     @include flex($direction: row, $align: center, $gap: 3rem);
+    @include max-width;
 
     position: relative;
     z-index: 9999;
-
-    max-width: 120rem;
-    margin: 0 auto;
     padding: 2.5rem 10rem;
 
     .content {
