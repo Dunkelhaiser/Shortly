@@ -63,7 +63,7 @@ header {
             padding: 2rem;
 
             opacity: 0;
-            background-color: var(--background);
+            background-color: var(--secondary);
             border-radius: 0.5em;
             box-shadow: 0 0.7rem 2.9rem 0 var(--shadow);
 
@@ -72,6 +72,10 @@ header {
             section,
             ul {
                 @include flex($align: center, $gap: 1.5rem);
+            }
+
+            a {
+                color: var(--background);
             }
         }
 

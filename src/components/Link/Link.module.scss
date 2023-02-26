@@ -1,0 +1,53 @@
+@use "../../scss/abstract/screen-queries.scss" as *;
+@use "../../scss/abstract/mixins.scss" as *;
+
+.link {
+    @include flex($direction: row, $align: center, $gap: 1.5rem);
+
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--background);
+    border-radius: 0.5em;
+
+    .links {
+        @include flex($direction: row, $justify: space-between, $gap: 1.5rem);
+
+        flex-grow: 1;
+
+        .original {
+            color: var(--very-dark-blue);
+        }
+
+        .short {
+            color: var(--primary);
+
+            &:hover,
+            &:focus-visible {
+                color: var(--primary-hover);
+            }
+
+            &:active {
+                color: var(--primary-active);
+            }
+        }
+    }
+
+    button {
+        padding: 0.5em 2em;
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @include respond-phone {
+        @include flex($align: flex-start, $gap: 1rem);
+
+        padding: 1.5rem;
+
+        .links {
+            flex-direction: column;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}

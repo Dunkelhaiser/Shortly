@@ -27,7 +27,7 @@
         "prettier/prettier": "warn",
         "no-console": "off",
         "prefer-const": "warn",
-        "react/button-has-type": "warn",
+        "react/button-has-type": "off",
         "react/function-component-definition": "off",
         "react/require-default-props": "warn",
         "react/no-unused-prop-types": "warn",

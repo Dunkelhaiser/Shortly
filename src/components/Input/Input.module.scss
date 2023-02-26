@@ -1,0 +1,48 @@
+@use "../../scss/abstract/screen-queries.scss" as *;
+@use "../../scss/abstract/mixins.scss" as *;
+
+.input {
+    position: relative;
+
+    width: 100%;
+    padding: calc(1em - 0.125rem) 2em;
+
+    background-color: var(--background);
+    border: 0.125rem solid var(--secondary-hover);
+    border-radius: 0.5em;
+
+    transition: var(--hover);
+
+    &::placeholder {
+        color: var(--grey-dark);
+    }
+
+    &.error {
+        color: var(--warning);
+        border-color: var(--warning);
+        outline-color: var(--warning);
+    }
+}
+
+.input_container {
+    position: relative;
+    flex-grow: 1;
+
+    span.error {
+        position: absolute;
+        bottom: -1.75rem;
+        left: 2.125em;
+
+        font-style: italic;
+        color: var(--warning);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @include respond-phone {
+        @include flex($gap: 0.5rem);
+
+        span.error {
+            position: static;
+        }
+    }
+}
