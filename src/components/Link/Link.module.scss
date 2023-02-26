@@ -10,12 +10,16 @@
     border-radius: 0.5em;
 
     .links {
-        @include flex($direction: row, $justify: space-between, $gap: 1.5rem);
+        @include flex($direction: row, $align: center, $justify: space-between, $gap: 1.5rem);
 
         flex-grow: 1;
+        max-width: 87.9%;
+        overflow-wrap: break-word;
 
         .original {
+            max-width: 72%;
             color: var(--very-dark-blue);
+            overflow-wrap: break-word;
         }
 
         .short {
@@ -37,6 +41,17 @@
     }
 
     /* stylelint-disable-next-line order/order */
+    @include respond-tablet-landscape {
+        .links {
+            max-width: 85%;
+        }
+    }
+    @include respond-tablet {
+        .links {
+            max-width: 81%;
+        }
+    }
+
     @include respond-phone {
         @include flex($align: flex-start, $gap: 1rem);
 
@@ -44,6 +59,12 @@
 
         .links {
             flex-direction: column;
+            align-items: flex-start;
+            max-width: 100%;
+
+            .original {
+                max-width: 100%;
+            }
         }
 
         button {
