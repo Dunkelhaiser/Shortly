@@ -5,9 +5,11 @@ interface Props {
     type: string;
     label: string;
     valid: boolean;
+    value: string;
+    onChange: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<Props> = ({ placeholder, type, label, valid }) => {
+const Input: React.FC<Props> = ({ placeholder, type, label, valid, value, onChange }) => {
     return (
         <div className={InputStyles.input_container}>
             <input
@@ -15,6 +17,8 @@ const Input: React.FC<Props> = ({ placeholder, type, label, valid }) => {
                 placeholder={placeholder}
                 type={type}
                 aria-label={label}
+                value={value}
+                onChange={onChange}
             />
             {!valid && <span className={InputStyles.error}>Please add a link</span>}
         </div>
